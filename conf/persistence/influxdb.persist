@@ -1,0 +1,12 @@
+Strategies {
+everyMinute : "0 * * * * ?"
+everyHour : "0 0 * * * ?"
+everyDay : "0 0 0 * * ?"
+every2Minutes : "0 */2 * ? * *"
+}
+ 
+Items {
+HCV5_Temperature_Exhaust, HCV5_Temperature_Extract, HCV5_Temperature_Outdoor, HCV5_Temperature_Supply: strategy = everyChange, restoreOnStartup
+Solax_PowerNow, Solax_PowerToday, Solax_PowerTotal: strategy = everyMinute, restoreOnStartup 
+Usage_Water_Total, Usage_Gas_Total, Usage_Electricity_Total: strategy = everyChange, restoreOnStartup
+}

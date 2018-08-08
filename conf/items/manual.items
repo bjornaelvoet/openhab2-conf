@@ -1,0 +1,6 @@
+Group energy_distribution
+
+Number Usage_Water_Total "Water Usage Total [%.3f m3]" <water> (energy_distribution)
+Number Usage_Gas_Total "Gas Usage Total [%.0f m3]" <gas> (energy_distribution)
+Number Usage_Electricity_Total "Electricity Usage Total [%.0f kWh]" <energy> (energy_distribution)
+

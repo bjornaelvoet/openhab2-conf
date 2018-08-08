@@ -1,0 +1,49 @@
+sitemap home label="My home automation" {
+    Frame label="Home" {
+
+	//Group   item=hvac      label="HCV5" {
+	//    Switch item=PluggitFanSpeed mappings=[0 = "Off", 1 = "1", 2 = "2", 3 = "3", 4 = "4" ]
+	//    Text item=PluggitTemperature01
+	//    Text item=PluggitTemperature02	
+	//    Text item=PluggitTemperature03	
+	//    Text item=PluggitTemperature04
+
+	//    Text item=PluggitLeftInstalled
+	//    Text item=PluggitRightInstalled
+
+	//    Switch item=PluggitCurrentMode mappings=[0="Standby", 1="Manual", 2="Demand", 3="Week program", 6="Summer", 16="Night"]
+	//    Switch item=PluggitSetMode mappings=[2 = "Demand", 4 = "Manual", 8 = "Weekprogram"]
+	//}
+        
+	Group item=hcv5 label="HCV5" {
+		Switch item=HCV5_FanSpeed label="Set fan speed [%d]" mappings=[0="Off", 1="1", 2="2", 3="3", 4="4"]
+		Switch item=HCV5_CurrentUnitMode label="Current mode [%d]" mappings=[1="Manual", 2="Demand", 3="Week", 5="Away", 6="Summer", 16="Night"]
+		Switch item=HCV5_ActiveUnitMode label="Set active mode [%d]" mappings=[2="Demand", 4="Manual", 8="Week"]
+
+        	Text item=HCV5_Temperature_Exhaust label="Temperature exhaust [%.1f]"
+        	Text item=HCV5_Temperature_Extract label="Temperature extract [%.1f]"
+        	Text item=HCV5_Temperature_Outdoor label="Temperature outdoor [%.1f]"
+        	Text item=HCV5_Temperature_Supply label="Temperature supply [%.1f]"
+	}
+
+	Group item=solax label="Solax" {
+		Text item=Solax_PowerNow label="Power Now"
+		Text item=Solax_PowerToday label="Power Today"
+		Text item=Solax_PowerTotal label="Power Total"
+	}
+
+	Group item=energy_distribution label="Energy distribution" {
+		Text item=Usage_Water_Total label="Usage Water Total"
+		Text item=Usage_Gas_Total label="Usage Gas Total"
+		Text item=Usage_Electricity_Total label="Usage Electricity Total"
+	}
+
+	//Group item=yahoo_information label="Yahoo information" {
+        	//Text item=WeatherInformation_Temperature label="Yahoo temperature outside [[%.1f °C]]"
+        	//Text item=WeatherInformation_Pressure label="Yahoo pressure outside [[%.1f hPa]]"
+        	//Text item=WeatherInformation_Humidity label="Yahoo relative humidity outside"
+	//}
+
+        //Image refresh=60000 url="http://grafana.aelvoetnet.be:3000/render/d-solo/EIaI7BKiz/home?orgId=1&panelId=4&from=now-12h&to=now&width=1000&height=500&tz=Europe%2FBrussels"
+    }
+}

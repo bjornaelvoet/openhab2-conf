@@ -1,0 +1,4 @@
+Group solax
+Number Solax_PowerNow "Power Now [%.0f W]" <energy> (solax) {http="<[solaxInformation:1000:REGEX(.*?Power\\sNow:</td><td>(.*?)W</td>.*)]"}
+Number Solax_PowerToday "Power Today [%.0f kWh]" <energy> (solax) {http="<[solaxInformation:1000:REGEX(.*?Today's\\sEnergy:</td><td>(.*?)kWh</td>.*)]"}
+Number Solax_PowerTotal "Power Total [%.0f kWh]" <energy> (solax) {http="<[solaxInformation:1000:REGEX(.*?Total\\sEnergy:</td><td>(.*?)kWh</td>.*)]"}

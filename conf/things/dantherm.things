@@ -1,0 +1,1 @@
+Thing dantherm:hcv5:hcv5_001 "Dantherm HCV5" @ "Home" [ipAddress="192.168.1.8", pollingInterval="1", simulationMode="false"]

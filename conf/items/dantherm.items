@@ -1,0 +1,25 @@
+//Number PluggitTemperature01 "Outdoor T1 Temp [%.1f]" {modbus="<[pluggittemp1:0]"}
+//Number PluggitTemperature02 "Supply T2 Temp [%.1f]" {modbus="<[pluggittemp2:0]"}
+//Number PluggitTemperature03 "Extract T3 Temp [%.1f]" {modbus="<[pluggittemp3:0]"}
+//Number PluggitTemperature04 "Exhaust T4 Temp [%.1f]" {modbus="<[pluggittemp4:0]"}
+//Number PluggitCurrentMode "Current mode [%d]" {modbus="<[pluggitcurrentmode:0]"}
+//Number PluggitSetMode "Set mode [%d]" {modbus="pluggitsetmode:0"}
+
+//Number PluggitFanSpeed "Fan speed level [%d]" {modbus="pluggitfanspeed:0"}
+//Number PluggitLeftInstalled "Left Installed [%d]" {modbus="<[pluggitleftinstalled:0]"}
+//Number PluggitRightInstalled "Right Installed [%d]" {modbus="<[pluggitrightinstalled:0]"}
+
+Group hcv5
+
+Number HCV5_FanSpeed "Fan speed [%d]" (hcv5) {channel="dantherm:hcv5:hcv5_001:fan-speed"}
+
+Number HCV5_CurrentUnitMode "Current mode [%d]" (hcv5) {channel="dantherm:hcv5:hcv5_001:current-unitmode"}
+Number HCV5_ActiveUnitMode "Active mode [%d]" (hcv5) {channel="dantherm:hcv5:hcv5_001:active-unitmode"}
+
+Number HCV5_Temperature_Outdoor "Outdoor T1 Temp [%.1f]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature1"}
+Number HCV5_Temperature_Supply "Supply T2 Temp [%.1f]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature2"}
+Number HCV5_Temperature_Extract "Extract T3 Temp [%.1f]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature3"}
+Number HCV5_Temperature_Exhaust "Exhaust T4 Temp [%.1f]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature4"}
+
+
+
