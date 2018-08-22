@@ -153,10 +153,16 @@ sitemap home label="My home automation" {
 		}
 		Frame label="GET" {
 			Switch item=HCV5_CurrentUnitMode mappings=[1="Manual", 2="Demand", 3="Week", 5="Away", 6="Summer", 16="Night"]
+			Text item=HCV5_RelativeHumidity
+			Text item=HCV5_RelativeHumiditySetpoint
+			Text item=HCV5_VOC
+			Text item=HCV5_CO2
 			Text item=HCV5_Temperature_Exhaust
 			Text item=HCV5_Temperature_Extract
 			Text item=HCV5_Temperature_Outdoor
 			Text item=HCV5_Temperature_Supply
+			Text item=HCV5_FANRPM1
+			Text item=HCV5_FANRPM2
 		}	
 	}
 

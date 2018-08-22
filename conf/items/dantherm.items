@@ -16,10 +16,18 @@ Number HCV5_FanSpeed "Fan speed" (hcv5) {channel="dantherm:hcv5:hcv5_001:fan-spe
 Number HCV5_CurrentUnitMode "Current mode" (hcv5) {channel="dantherm:hcv5:hcv5_001:current-unitmode"}
 Number HCV5_ActiveUnitMode "Active mode" (hcv5) {channel="dantherm:hcv5:hcv5_001:active-unitmode"}
 
+Number HCV5_RelativeHumidity "Relative humidity" (hcv5) {channel="dantherm:hcv5:hcv5_001:relative-humidity"}
+Number HCV5_RelativeHumiditySetpoint "Relative humidity setpoint" (hcv5) {channel="dantherm:hcv5:hcv5_001:relative-humidity-setpoint"}
+
+Number HCV5_VOC "VOC" (hcv5) {channel="dantherm:hcv5:hcv5_001:voc"}
+
+Number HCV5_CO2 "CO2" (hcv5) {channel="dantherm:hcv5:hcv5_001:co2"}
+
 Number:Temperature HCV5_Temperature_Outdoor "Outdoor temperature [%.1f %unit%]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature1"}
 Number:Temperature HCV5_Temperature_Supply "Supply temperature [%.1f %unit%]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature2"}
 Number:Temperature HCV5_Temperature_Extract "Extract temperature [%.1f %unit%]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature3"}
 Number:Temperature HCV5_Temperature_Exhaust "Exhaust temperature [%.1f %unit%]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature4"}
 
-
+Number HCV5_FANRPM1 "Fan rpm in [%.1f]" (hcv5) { channel="dantherm:hcv5:hcv5_001:fan-rpm1" }
+Number HCV5_FANRPM2 "Fan rpm out[%.1f]" (hcv5) { channel="dantherm:hcv5:hcv5_001:fan-rpm2" }
 
