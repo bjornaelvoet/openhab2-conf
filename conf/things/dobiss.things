@@ -1,0 +1,4 @@
+//Thing dobiss_relay:relay:dobiss_relay_001 "Dobiss Relay 001" @ "Home" [ipAddress="192.168.1.108", pollingInterval="10", address="3"]
+//Thing dobiss_relay:relay:dobiss_relay_002 "Dobiss Relay 002" @ "Home" [ipAddress="192.168.1.108", pollingInterval="10", address="2"]
+//Thing dobiss_dimmer:dimmer:dobiss_dimmer_001 "Dobiss Dimmer 001" @ "Home" [ipAddress="192.168.1.108", pollingInterval="10", address="1"]
+Thing dobiss:domotics:dobiss_001 "Dobiss 001" @ "Home" [ipAddress="192.168.1.108", pollingInterval="10", addressRelay01="3", addressRelay02="2", addressDimmer01="1", addressDimmer02="-1"]

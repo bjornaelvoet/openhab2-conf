@@ -1,0 +1,199 @@
+rule network_reset_counters
+when
+	Time is midnight
+then
+	tv_sony_kdl32_onlineday.sendCommand(0)
+	tv_apple_onlineday.sendCommand(0)
+	wii_onlineday.sendCommand(0)
+	pc_server_onlineday.sendCommand(0)
+	pc_jasper_onlineday.sendCommand(0)
+	pc_daan_onlineday.sendCommand(0)
+	pc_bjorn_onlineday.sendCommand(0)
+	pc_eva_onlineday.sendCommand(0)
+	ipad_jasper_onlineday.sendCommand(0)
+	ipad_daan_onlineday.sendCommand(0)
+	ipad_bjorn_onlineday.sendCommand(0)
+	ipad_eva_onlineday.sendCommand(0)
+	iphone_jasper_onlineday.sendCommand(0)
+	iphone_daan_onlineday.sendCommand(0)
+	iphone_bjorn_onlineday.sendCommand(0)
+	iphone_eva_onlineday.sendCommand(0)
+end
+
+rule network_update_counters
+when
+	//We want every minute except midnight
+	//We give midnight script 2 minutes to reset counters to zero
+//	Time cron "0 0/1 * 1/1 * ? *"
+	Time cron "0 0/1 1-23 1/1 * ? *" 
+	or
+	Time cron "0 2-59 0 1/1 * ? *"
+then
+		
+
+
+	if (tv_sony_kdl32_online.state == ON) {
+		if(!(tv_sony_kdl32_onlineday.state instanceof DecimalType)) {
+			tv_sony_kdl32_onlineday.sendCommand(1)
+		}
+		else {
+			var int tmp = (tv_sony_kdl32_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			tv_sony_kdl32_onlineday.sendCommand(new DecimalType(tmp))
+		}			
+	}
+	if (tv_apple_online.state == ON) {
+		if(!(tv_apple_onlineday.state instanceof DecimalType)) {
+			tv_apple_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (tv_apple_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			tv_apple_onlineday.sendCommand(new DecimalType(tmp))
+		}	
+	}
+	if (wii_online.state == ON) {
+		if(!(wii_onlineday.state instanceof DecimalType)) {
+			wii_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (wii_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			wii_onlineday.sendCommand(new DecimalType(tmp))
+		}		
+	}
+	if (pc_server_online.state == ON) {
+		if(!(pc_server_onlineday.state instanceof DecimalType)) {
+			pc_server_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (pc_server_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			pc_server_onlineday.sendCommand(new DecimalType(tmp))
+		}		
+	}
+	if (pc_jasper_online.state == ON) {
+		if(!(pc_jasper_onlineday.state instanceof DecimalType)) {
+			pc_jasper_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (pc_jasper_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			pc_jasper_onlineday.sendCommand(new DecimalType(tmp))
+		}		
+	}
+        if (pc_daan_online.state == ON) {
+		if(!(pc_daan_onlineday.state instanceof DecimalType)) {
+			pc_daan_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (pc_daan_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			pc_daan_onlineday.sendCommand(new DecimalType(tmp))
+		}		        
+	}
+        if (pc_bjorn_online.state == ON) {
+		if(!(pc_bjorn_onlineday.state instanceof DecimalType)) {
+			pc_bjorn_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (pc_bjorn_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			pc_bjorn_onlineday.sendCommand(new DecimalType(tmp))
+		}	        
+	}
+        if (pc_eva_online.state == ON) {
+  		if(!(pc_eva_onlineday.state instanceof DecimalType)) {
+			pc_eva_onlineday.sendCommand(1)	
+		}
+		else {
+			var tmp = (pc_eva_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			pc_eva_onlineday.sendCommand(new DecimalType(tmp))
+		}	          
+	}
+	if (ipad_jasper_online.state == ON) {
+  		if(!(ipad_jasper_onlineday.state instanceof DecimalType)) {
+			ipad_jasper_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (ipad_jasper_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			ipad_jasper_onlineday.sendCommand(new DecimalType(tmp))
+		}	        
+	}
+        if (ipad_daan_online.state == ON) {
+  		if(!(ipad_daan_onlineday.state instanceof DecimalType)) {
+			ipad_daan_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (ipad_daan_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			ipad_daan_onlineday.sendCommand(new DecimalType(tmp))
+		}	        
+	}
+        if (ipad_bjorn_online.state == ON) {
+  		if(!(ipad_bjorn_onlineday.state instanceof DecimalType)) {
+			ipad_bjorn_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (ipad_bjorn_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			ipad_bjorn_onlineday.sendCommand(new DecimalType(tmp))
+		}	          
+	}
+        if (ipad_eva_online.state == ON) {
+  		if(!(ipad_eva_onlineday.state instanceof DecimalType)) {
+			ipad_eva_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (ipad_eva_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			ipad_eva_onlineday.sendCommand(new DecimalType(tmp))
+		}	        
+	}
+	if (iphone_jasper_online.state == ON) {
+  		if(!(iphone_jasper_onlineday.state instanceof DecimalType)) {
+			iphone_jasper_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (iphone_jasper_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			iphone_jasper_onlineday.sendCommand(new DecimalType(tmp))
+		}	         
+	}
+        if (iphone_daan_online.state == ON) {
+  		if(!(iphone_daan_onlineday.state instanceof DecimalType)) {
+			iphone_daan_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (iphone_daan_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			iphone_daan_onlineday.sendCommand(new DecimalType(tmp))
+		}	        
+	}
+        if (iphone_bjorn_online.state == ON) {
+  		if(!(iphone_bjorn_onlineday.state instanceof DecimalType)) {
+			iphone_bjorn_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (iphone_bjorn_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			iphone_bjorn_onlineday.sendCommand(new DecimalType(tmp))
+		}	        
+	}
+        if (iphone_eva_online.state == ON) {
+  		if(!(iphone_eva_onlineday.state instanceof DecimalType)) {
+			iphone_eva_onlineday.sendCommand(1)	
+		}
+		else {
+			var int tmp = (iphone_eva_onlineday.state as DecimalType).intValue
+			tmp = tmp + 1
+			iphone_eva_onlineday.sendCommand(new DecimalType(tmp))
+		}	        
+	}
+
+end
+	
+
+

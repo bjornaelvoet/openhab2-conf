@@ -1,0 +1,31 @@
+#Need to create seperate things because of bug with only one offset per thing
+
+astro:sun:home [ geolocation="51.11494447904795,3.562260305822436,22", interval=60 ]
+{
+    Channels:
+    	Type rangeEvent : rise#event [
+        	offset=30
+    	]
+	Type rangeEvent : set#event [
+		offset=-30	
+	]
+}
+
+astro:sun:home_rise_offset [ geolocation="51.11494447904795,3.562260305822436,22", interval=60 ]
+{
+    Channels:
+    	Type rangeEvent : rise#event [
+        	offset=30
+    	]
+}
+
+astro:sun:home_set_offset [ geolocation="51.11494447904795,3.562260305822436,22", interval=60 ]
+{
+    Channels:
+	Type rangeEvent : set#event [
+		offset=-30	
+	]
+}
+
+astro:moon:home  [ geolocation="51.11494447904795,3.562260305822436,22", interval=60 ]
+

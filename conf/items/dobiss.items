@@ -1,0 +1,32 @@
+Group dobiss
+
+Dimmer DOBISS_Dimmer_001_Id_01 "Licht living rondom" (dobiss) {channel="dobiss:domotics:dobiss_001:dimmer01_channel1"}
+Dimmer DOBISS_Dimmer_001_Id_02 "Licht living zetel" (dobiss) {channel="dobiss:domotics:dobiss_001:dimmer01_channel2"}
+Dimmer DOBISS_Dimmer_001_Id_03 "Licht living kast" (dobiss) {channel="dobiss:domotics:dobiss_001:dimmer01_channel3"}
+Dimmer DOBISS_Dimmer_001_Id_04 "Licht slaapkamer ouders" (dobiss) {channel="dobiss:domotics:dobiss_001:dimmer01_channel4"}
+
+Switch DOBISS_Relay_001_Id_01 "Licht bureau" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel1"}
+Switch DOBISS_Relay_001_Id_02 "Licht terras buiten" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel2"}
+Switch DOBISS_Relay_001_Id_03 "Licht eettafel" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel3"}
+Switch DOBISS_Relay_001_Id_04 "Licht keuken rondom" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel4"}
+Switch DOBISS_Relay_001_Id_05 "Licht keuken werkblad" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel5"}
+Switch DOBISS_Relay_001_Id_06 "Licht douche wasplaats" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel6"}
+Switch DOBISS_Relay_001_Id_07 "Licht wasplaats" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel7"}
+Switch DOBISS_Relay_001_Id_08 "Licht douche badkamer" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel8"}
+//Switch DOBISS_Relay_001_Id_09 "Rel 01 id 09" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel9"}
+//Switch DOBISS_Relay_001_Id_10 "Rel 01 id 10" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel10"}
+//Switch DOBISS_Relay_001_Id_11 "Rel 01 id 11" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel11"}
+//Switch DOBISS_Relay_001_Id_12 "Rel 01 id 12" (dobiss) {channel="dobiss:domotics:dobiss_001:relay01_channel12"}
+
+Switch DOBISS_Relay_002_Id_01 "Licht badkamer meubel" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel1"}
+Switch DOBISS_Relay_002_Id_02 "Licht slaapkamer Jasper" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel2"}
+Switch DOBISS_Relay_002_Id_03 "Licht berging boven" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel3"}
+Switch DOBISS_Relay_002_Id_04 "Licht slaapkamer Daan" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel4"}
+Switch DOBISS_Relay_002_Id_05 "Licht hall boven" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel5"}
+Switch DOBISS_Relay_002_Id_06 "Licht trap muur" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel6"}
+Switch DOBISS_Relay_002_Id_07 "Licht inkom" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel7"}
+Switch DOBISS_Relay_002_Id_08 "Licht voordeur buiten" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel8"}
+//Switch DOBISS_Relay_002_Id_09 "Rel 02 id 09" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel9"}
+//Switch DOBISS_Relay_002_Id_10 "Rel 02 id 10" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel10"}
+//Switch DOBISS_Relay_002_Id_11 "Rel 02 id 11" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel11"}
+//Switch DOBISS_Relay_002_Id_12 "Rel 02 id 12" (dobiss) {channel="dobiss:domotics:dobiss_001:relay02_channel12"}

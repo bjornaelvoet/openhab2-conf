@@ -1,0 +1,67 @@
+Group network
+
+Switch tv_sony_kdl32_online "TV Sony KLD32" (network) { channel="network:pingdevice:tv_sony_kdl32:online" }
+DateTime tv_sony_kdl32_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:tv_sony_kdl32:lastseen" }
+Number tv_sony_kdl32_onlineday "Today online [%d] minutes"
+
+Switch tv_apple_online "Apple TV" (network) { channel="network:pingdevice:tv_apple:online" }
+DateTime tv_apple_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:tv_apple:lastseen" }
+Number tv_apple_onlineday "Today online [%d] minutes"
+
+Switch wii_online "Wii" (network) { channel="network:pingdevice:wii:online" }
+DateTime wii_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:wii:lastseen" }
+Number wii_onlineday "Today online [%d] minutes"
+
+Switch pc_server_online "PC server" (network) { channel="network:pingdevice:pc_server:online" }
+DateTime pc_server_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:pc_server:lastseen" }
+Number pc_server_onlineday "Today online [%d] minutes"
+
+Switch pc_jasper_online "PC Japsper" (network) { channel="network:pingdevice:pc_jasper:online" }
+DateTime pc_jasper_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:pc_jasper:lastseen" }
+Number pc_jasper_onlineday "Today online [%d] minutes"
+
+Switch pc_daan_online "PC Daan" (network) { channel="network:pingdevice:pc_daan:online" }
+DateTime pc_daan_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:pc_daan:lastseen" }
+Number pc_daan_onlineday "Today online [%d] minutes"
+
+Switch pc_bjorn_online "PC Bjorn" (network) { channel="network:pingdevice:pc_bjorn:online" }
+DateTime pc_bjorn_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:pc_bjorn:lastseen" }
+Number pc_bjorn_onlineday "Today online [%d] minutes"
+
+Switch pc_eva_online "PC Eva" (network) { channel="network:pingdevice:pc_eva:online" }
+DateTime pc_eva_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:pc_eva:lastseen" }
+Number pc_eva_onlineday "Today online [%d] minutes"
+
+Switch ipad_jasper_online "iPad Jasper" (network) { channel="network:pingdevice:ipad_jasper:online" }
+DateTime ipad_jasper_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:ipad_jasper:lastseen" }
+Number ipad_jasper_onlineday "Today online [%d] minutes"
+
+Switch ipad_daan_online "iPad Daan" (network) { channel="network:pingdevice:ipad_daan:online" }
+DateTime ipad_daan_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:ipad_daan:lastseen" }
+Number ipad_daan_onlineday "Today online [%d] minutes"
+
+Switch ipad_bjorn_online "iPad Bjorn" (network) { channel="network:pingdevice:ipad_bjorn:online" }
+DateTime ipad_bjorn_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:ipad_bjorn:lastseen" }
+Number ipad_bjorn_onlineday "Today online [%d] minutes"
+
+Switch ipad_eva_online "iPad Eva" (network) { channel="network:pingdevice:ipad_eva:online" }
+DateTime ipad_eva_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:ipad_eva:lastseen" }
+Number ipad_eva_onlineday "Today online [%d] minutes"
+
+Switch iphone_jasper_online "iPhone Jasper" (network) { channel="network:pingdevice:iphone_jasper:online" }
+DateTime iphone_jasper_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:iphone_jasper:lastseen" }
+Number iphone_jasper_onlineday "Today online [%d] minutes"
+
+Switch iphone_daan_online "iPhone Daan" (network) { channel="network:pingdevice:iphone_daan:online" }
+DateTime iphone_daan_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:iphone_daan:lastseen" }
+Number iphone_daan_onlineday "Today online [%d] minutes"
+
+Switch iphone_bjorn_online "iPhone Bjorn" (network) { channel="network:pingdevice:iphone_bjorn:online" }
+DateTime iphone_bjorn_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:iphone_bjorn:lastseen" }
+Number iphone_bjorn_onlineday "Today online [%d] minutes"
+
+Switch iphone_eva_online "iPhone Eva" (network) { channel="network:pingdevice:iphone_eva:online" }
+DateTime iphone_eva_lastseen "Last seen [%1$td.%1$tm.%1$ty %1$tH:%1$tM]" (network) { channel="network:pingdevice:iphone_eva:lastseen" }
+Number iphone_eva_onlineday "Today online [%d] minutes"
+
+

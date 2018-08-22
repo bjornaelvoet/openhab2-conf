@@ -1,0 +1,12 @@
+Group astro
+
+DateTime         Sunrise_Time        "Sunrise [%1$tH:%1$tM]"		(astro)		{ channel="astro:sun:home:rise#start" }
+DateTime	 Sunrise_Time_offset "Sunrise offset [%1$tH:%1$tM]"	(astro)		{ channel="astro:sun:home_rise_offset:rise#start"}
+DateTime         Sunset_Time         "Sunset [%1$tH:%1$tM]"		(astro)         { channel="astro:sun:home:set#start" }
+DateTime	 Sunset_Time_offset  "Sunset offset [%1$tH:%1$tM]"	(astro)		{ channel="astro:sun:home_set_offset:set#start" }
+Number:Angle     Azimuth             "Azimuth"				(astro)         { channel="astro:sun:home:position#azimuth" }
+Number:Angle     Elevation           "Elevation"                 	(astro)         { channel="astro:sun:home:position#elevation" }
+String           MoonPhase           "MoonPhase"                 	(astro)         { channel="astro:moon:home:phase#name" }
+Number:Length    MoonDistance        "MoonDistance [%.1f %unit%]"	(astro)         { channel="astro:moon:home:distance#distance" }
+Number:Intensity Total_Radiation     "Radiation [%.2f %unit%]"   	(astro)         { channel="astro:sun:home:radiation#total" }
+Number:Intensity Diffuse_Radiation   "Diffuse Radiation [%.2f %unit%]"	(astro)         { channel="astro:sun:home:radiation#diffuse" }

@@ -1,0 +1,22 @@
+network:pingdevice:tv_sony_kdl32 [ hostname="192.168.1.14" ]
+
+network:pingdevice:tv_apple [ hostname="192.168.1.9"]
+
+network:pingdevice:wii [ hostname="192.168.1.44" ]
+
+network:pingdevice:pc_server [ hostname="192.168.1.5" ]
+network:pingdevice:pc_jasper [ hostname="192.168.1.15" ]
+network:pingdevice:pc_daan [ hostname="192.168.1.13" ]
+network:pingdevice:pc_bjorn [ hostname="192.168.1.10" ]
+network:pingdevice:pc_eva [ hostname="192.168.1.16" ]
+
+network:pingdevice:ipad_jasper [ hostname="192.168.1.29" ]
+network:pingdevice:ipad_daan [ hostname="192.168.1.12" ]
+network:pingdevice:ipad_bjorn [ hostname="192.168.1.22" ]
+network:pingdevice:ipad_eva [ hostname="192.168.1.42" ]
+
+network:pingdevice:iphone_jasper [ hostname="192.168.1.42" ]
+network:pingdevice:iphone_daan [ hostname="192.168.1.23" ]
+network:pingdevice:iphone_bjorn [ hostname="192.168.1.18" ]
+network:pingdevice:iphone_eva [ hostname="192.168.1.27" ]
+

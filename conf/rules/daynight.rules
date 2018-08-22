@@ -1,0 +1,84 @@
+rule "NightFalling"
+when
+	//When sun is set so night is falling (offset of 30 minutes earlier)
+	Channel "astro:sun:home_set_offset#event" triggered START
+then
+	//Switch on stairs light
+	DOBISS_Relay_002_Id_06.sendCommand(ON)
+	//Switch on outside light on portal
+	DOBISS_Relay_002_Id_08.sendCommand(ON)
+	//Switch on outside terras lights
+	DOBISS_Relay_001_Id_02.sendCommand(ON)
+
+	//When TV is on, someone is at home and we start lighting the living room
+	if (tv_sony_kdl32_online.state == ON) {
+		//Switch on surrounding kitchen lights if no kitchen lights or on yet
+		DOBISS_Relay_001_Id_04.sendCommand(ON)		
+		//Switch on surrounding living room lights
+		DOBISS_Dimmer_001_Id_01.sendCommand(50)
+	}
+end
+
+rule "DayRising"
+when
+	//When sun is rising so day is starting (offset of 30 minutes later)
+	Channel "astro:sun:home_rise_offset#event" triggered START
+then
+	//Switch off stairs light
+	DOBISS_Relay_002_Id_06.sendCommand(OFF)
+	//Switch off outside light on portal
+	DOBISS_Relay_002_Id_08.sendCommand(OFF)
+end
+
+rule "Midnight"
+when
+	//On midnight
+	Time is midnight
+then
+	//Switch off outside light on portal
+	DOBISS_Relay_002_Id_08.sendCommand(OFF)
+	//Switch off outside terras lights
+	DOBISS_Relay_001_Id_02.sendCommand(OFF)
+end
+
+rule "AutoSleepingOff"
+when 
+	//Every day at 08u00
+	Time cron "0 0 8 1/1 * ? *"
+then
+	//Toggle sleep item
+	if (Sleeping.state == ON) {
+		Sleeping.sendCommand(OFF)
+	}
+end
+
+rule "Sleeping"
+when
+	//When state of item Sleeping is changing from off to on
+	Item Sleeping changed from OFF to ON
+then
+	//Switch off outside light on portal
+	DOBISS_Relay_002_Id_08.sendCommand(OFF)
+	//Switch off outside terras lights
+	DOBISS_Relay_001_Id_02.sendCommand(OFF)
+
+	//Set ventillation to manual mode and fan speed 1
+	//mappings=[2="Demand", 4="Manual", 8="Week"]
+	HCV5_ActiveUnitMode.sendCommand(4)
+	//[0="Off", 1="1", 2="2", 3="3", 4="4"]
+	HCV5_FanSpeed.sendCommand(1)
+end
+
+rule "Waking"
+when
+	//When state of item Sleeping is changing from on to off
+	Item Sleeping changed from ON to OFF
+then
+	//Set ventillation to demand mode
+	//mappings=[2="Demand", 4="Manual", 8="Week"]
+	var int mode = (HCV5_ActiveUnitMode.state as DecimalType).intValue
+	if (mode != 2) {
+		HCV5_ActiveUnitMode.sendCommand(2)
+	}
+end
+
