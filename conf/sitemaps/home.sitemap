@@ -1,48 +1,195 @@
 sitemap home label="My home automation" {
     Frame label="Home" {
 
-	//Group   item=hvac      label="HCV5" {
-	//    Switch item=PluggitFanSpeed mappings=[0 = "Off", 1 = "1", 2 = "2", 3 = "3", 4 = "4" ]
-	//    Text item=PluggitTemperature01
-	//    Text item=PluggitTemperature02	
-	//    Text item=PluggitTemperature03	
-	//    Text item=PluggitTemperature04
+	Group item=helper label="Helper [SET]" {
+		Switch item=Sleeping
+		Switch item=Home
+	}
 
-	//    Text item=PluggitLeftInstalled
-	//    Text item=PluggitRightInstalled
+	Group item=network label="Network [GET]" {
+		Switch item=tv_sony_kdl32_online
+		Text item=tv_sony_kdl32_lastseen
+		Text item=tv_sony_kdl32_onlineday
+		
+		Switch item=tv_apple_online
+		Text item=tv_apple_lastseen
+		Text item=tv_apple_onlineday
+		
+		Switch item=wii_online
+		Text item=wii_lastseen
+		Text item=wii_onlineday
+		
+		Switch item=pc_server_online
+		Text item=pc_server_lastseen
+		Text item=pc_server_onlineday
+		
+		Switch item=pc_jasper_online
+		Text item=pc_jasper_lastseen
+		Text item=pc_jasper_onlineday
+		
+		Switch item=pc_daan_online
+		Text item=pc_daan_lastseen
+		Text item=pc_daan_onlineday
+		
+		Switch item=pc_bjorn_online
+		Text item=pc_bjorn_lastseen
+		Text item=pc_bjorn_onlineday
+		
+		Switch item=pc_eva_online
+		Text item=pc_eva_lastseen
+		Text item=pc_eva_onlineday
+		
+		Switch item=ipad_jasper_online
+		Text item=ipad_jasper_lastseen
+		Text item=ipad_jasper_onlineday
+		
+		Switch item=ipad_daan_online
+		Text item=ipad_daan_lastseen
+		Text item=ipad_daan_onlineday
+		
+		Switch item=ipad_bjorn_online
+		Text item=ipad_bjorn_lastseen
+		Text item=ipad_bjorn_onlineday
+		
+		Switch item=ipad_eva_online
+		Text item=ipad_eva_lastseen
+		Text item=ipad_eva_onlineday
+		
+		Switch item=iphone_jasper_online
+		Text item=iphone_jasper_lastseen
+		Text item=iphone_jasper_onlineday
+		
+		Switch item=iphone_daan_online
+		Text item=iphone_daan_lastseen
+		Text item=iphone_daan_onlineday
+		
+		Switch item=iphone_bjorn_online
+		Text item=iphone_bjorn_lastseen
+		Text item=iphone_bjorn_onlineday
+		
+		Switch item=iphone_eva_online
+		Text item=iphone_eva_lastseen
+		Text item=iphone_eva_onlineday
+	}
 
-	//    Switch item=PluggitCurrentMode mappings=[0="Standby", 1="Manual", 2="Demand", 3="Week program", 6="Summer", 16="Night"]
-	//    Switch item=PluggitSetMode mappings=[2 = "Demand", 4 = "Manual", 8 = "Weekprogram"]
-	//}
-        
+	Group item=dobiss label="Dobiss [GET/SET]" {
+		Frame label="All" {
+			Switch item=DOBISS_Relay_001_Id_01
+			Switch item=DOBISS_Relay_001_Id_02
+			Switch item=DOBISS_Relay_001_Id_03
+			Switch item=DOBISS_Relay_001_Id_04
+			Switch item=DOBISS_Relay_001_Id_05
+			Switch item=DOBISS_Relay_001_Id_06
+			Switch item=DOBISS_Relay_001_Id_07
+			Switch item=DOBISS_Relay_001_Id_08
+			//Switch item=DOBISS_Relay_001_Id_09
+			//Switch item=DOBISS_Relay_001_Id_10
+			//Switch item=DOBISS_Relay_001_Id_11
+			//Switch item=DOBISS_Relay_001_Id_12
+
+			Switch item=DOBISS_Relay_002_Id_01
+			Switch item=DOBISS_Relay_002_Id_02
+			Switch item=DOBISS_Relay_002_Id_03
+			Switch item=DOBISS_Relay_002_Id_04
+			Switch item=DOBISS_Relay_002_Id_05
+			Switch item=DOBISS_Relay_002_Id_06
+			Switch item=DOBISS_Relay_002_Id_07
+			Switch item=DOBISS_Relay_002_Id_08
+			//Switch item=DOBISS_Relay_002_Id_09
+			//Switch item=DOBISS_Relay_002_Id_10
+			//Switch item=DOBISS_Relay_002_Id_11
+			//Switch item=DOBISS_Relay_002_Id_12
+
+			Slider item=DOBISS_Dimmer_001_Id_01
+			Slider item=DOBISS_Dimmer_001_Id_02
+			Slider item=DOBISS_Dimmer_001_Id_03
+			Slider item=DOBISS_Dimmer_001_Id_04
+		}
+
+		Frame label="Study room" {
+			Switch item=DOBISS_Relay_001_Id_01		
+		}
+		Frame label="Kitchen" {
+			Switch item=DOBISS_Relay_001_Id_03
+			Switch item=DOBISS_Relay_001_Id_04
+			Switch item=DOBISS_Relay_001_Id_05	
+		}
+		Frame label="Storage downstairs" {
+			Switch item=DOBISS_Relay_001_Id_06
+			Switch item=DOBISS_Relay_001_Id_07			
+		}
+		Frame label="Hall downstairs" {
+			Switch item=DOBISS_Relay_002_Id_07
+		}
+		Frame label="Stairs" {
+			Switch item=DOBISS_Relay_002_Id_06
+		}
+		Frame label="Bathroom" {
+			Switch item=DOBISS_Relay_001_Id_08
+			Switch item=DOBISS_Relay_002_Id_01
+		}
+		Frame label="Daan" {
+			Switch item=DOBISS_Relay_002_Id_04
+		}
+		Frame label="Jasper" {
+			Switch item=DOBISS_Relay_002_Id_02	
+		}
+		Frame label="Storage upstairs" {
+			Switch item=DOBISS_Relay_002_Id_03	
+		}	
+		Frame label="Hall upstairs" {
+			Switch item=DOBISS_Relay_002_Id_05
+		}
+		Frame label="Outside" {
+			Switch item=DOBISS_Relay_001_Id_02
+			Switch item=DOBISS_Relay_002_Id_08
+		}
+	}
+
 	Group item=hcv5 label="HCV5" {
-		Switch item=HCV5_FanSpeed label="Set fan speed [%d]" mappings=[0="Off", 1="1", 2="2", 3="3", 4="4"]
-		Switch item=HCV5_CurrentUnitMode label="Current mode [%d]" mappings=[1="Manual", 2="Demand", 3="Week", 5="Away", 6="Summer", 16="Night"]
-		Switch item=HCV5_ActiveUnitMode label="Set active mode [%d]" mappings=[2="Demand", 4="Manual", 8="Week"]
-
-        	Text item=HCV5_Temperature_Exhaust label="Temperature exhaust [%.1f]"
-        	Text item=HCV5_Temperature_Extract label="Temperature extract [%.1f]"
-        	Text item=HCV5_Temperature_Outdoor label="Temperature outdoor [%.1f]"
-        	Text item=HCV5_Temperature_Supply label="Temperature supply [%.1f]"
+		Frame label="SET" {
+			Switch item=HCV5_FanSpeed mappings=[0="Off", 1="1", 2="2", 3="3", 4="4"]
+			Switch item=HCV5_ActiveUnitMode mappings=[2="Demand", 4="Manual", 8="Week"]
+		}
+		Frame label="GET" {
+			Switch item=HCV5_CurrentUnitMode mappings=[1="Manual", 2="Demand", 3="Week", 5="Away", 6="Summer", 16="Night"]
+			Text item=HCV5_Temperature_Exhaust
+			Text item=HCV5_Temperature_Extract
+			Text item=HCV5_Temperature_Outdoor
+			Text item=HCV5_Temperature_Supply
+		}	
 	}
 
-	Group item=solax label="Solax" {
-		Text item=Solax_PowerNow label="Power Now"
-		Text item=Solax_PowerToday label="Power Today"
-		Text item=Solax_PowerTotal label="Power Total"
+	Group item=solax label="Solax [GET]" {
+		Text item=Solax_PowerNow
+		Text item=Solax_PowerToday
+		Text item=Solax_PowerTotal
 	}
 
-	Group item=energy_distribution label="Energy distribution" {
-		Text item=Usage_Water_Total label="Usage Water Total"
-		Text item=Usage_Gas_Total label="Usage Gas Total"
-		Text item=Usage_Electricity_Total label="Usage Electricity Total"
+	Group item=energy_distribution label="Energy distribution [GET]" {
+		Text item=Usage_Water_Total
+		Text item=Usage_Gas_Total
+		Text item=Usage_Electricity_Total		
 	}
 
-	//Group item=yahoo_information label="Yahoo information" {
-        	//Text item=WeatherInformation_Temperature label="Yahoo temperature outside [[%.1f °C]]"
-        	//Text item=WeatherInformation_Pressure label="Yahoo pressure outside [[%.1f hPa]]"
-        	//Text item=WeatherInformation_Humidity label="Yahoo relative humidity outside"
-	//}
+	Group item=yahoo label="Yahoo weather [GET]" {
+	        Text item=Yahoo_Temperature
+        	Text item=Yahoo_Pressure
+        	Text item=Yahoo_Humidity		
+	}
+
+	Group item=astro label="Astro [GET]" {
+		Text item=Sunrise_Time
+		Text item=Sunrise_Time_offset
+		Text item=Sunset_Time
+		Text item=Sunset_Time_offset
+		Text item=Azimuth
+		Text item=Elevation
+		Text item=MoonPhase
+		Text item=MoonDistance
+		Text item=Total_Radiation
+		Text item=Diffuse_Radiation
+	}
 
         //Image refresh=60000 url="http://grafana.aelvoetnet.be:3000/render/d-solo/EIaI7BKiz/home?orgId=1&panelId=4&from=now-12h&to=now&width=1000&height=500&tz=Europe%2FBrussels"
     }

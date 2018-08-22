@@ -11,15 +11,15 @@
 
 Group hcv5
 
-Number HCV5_FanSpeed "Fan speed [%d]" (hcv5) {channel="dantherm:hcv5:hcv5_001:fan-speed"}
+Number HCV5_FanSpeed "Fan speed" (hcv5) {channel="dantherm:hcv5:hcv5_001:fan-speed"}
 
-Number HCV5_CurrentUnitMode "Current mode [%d]" (hcv5) {channel="dantherm:hcv5:hcv5_001:current-unitmode"}
-Number HCV5_ActiveUnitMode "Active mode [%d]" (hcv5) {channel="dantherm:hcv5:hcv5_001:active-unitmode"}
+Number HCV5_CurrentUnitMode "Current mode" (hcv5) {channel="dantherm:hcv5:hcv5_001:current-unitmode"}
+Number HCV5_ActiveUnitMode "Active mode" (hcv5) {channel="dantherm:hcv5:hcv5_001:active-unitmode"}
 
-Number HCV5_Temperature_Outdoor "Outdoor T1 Temp [%.1f]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature1"}
-Number HCV5_Temperature_Supply "Supply T2 Temp [%.1f]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature2"}
-Number HCV5_Temperature_Extract "Extract T3 Temp [%.1f]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature3"}
-Number HCV5_Temperature_Exhaust "Exhaust T4 Temp [%.1f]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature4"}
+Number:Temperature HCV5_Temperature_Outdoor "Outdoor temperature [%.1f %unit%]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature1"}
+Number:Temperature HCV5_Temperature_Supply "Supply temperature [%.1f %unit%]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature2"}
+Number:Temperature HCV5_Temperature_Extract "Extract temperature [%.1f %unit%]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature3"}
+Number:Temperature HCV5_Temperature_Exhaust "Exhaust temperature [%.1f %unit%]" <temperature> (hcv5) {channel="dantherm:hcv5:hcv5_001:temperature4"}
 
 
 

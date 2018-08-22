@@ -3,10 +3,13 @@ everyMinute : "0 * * * * ?"
 everyHour : "0 0 * * * ?"
 everyDay : "0 0 0 * * ?"
 every2Minutes : "0 */2 * ? * *"
+every5Minutes : "0 */5 * ? * *"
 }
  
 Items {
-HCV5_Temperature_Exhaust, HCV5_Temperature_Extract, HCV5_Temperature_Outdoor, HCV5_Temperature_Supply: strategy = everyChange, restoreOnStartup
+HCV5_FanSpeed, HCV5_CurrentUnitMode, HCV5_ActiveUnitMode, HCV5_Temperature_Exhaust, HCV5_Temperature_Extract, HCV5_Temperature_Outdoor, HCV5_Temperature_Supply: strategy = everyMinute, restoreOnStartup
 Solax_PowerNow, Solax_PowerToday, Solax_PowerTotal: strategy = everyMinute, restoreOnStartup 
-Usage_Water_Total, Usage_Gas_Total, Usage_Electricity_Total: strategy = everyChange, restoreOnStartup
+Usage_Water_Total, Usage_Gas_Total, Usage_Electricity_Total: strategy = everyMinute, restoreOnStartup
+Yahoo_Temperature, Yahoo_Humidity, Yahoo_Pressure: strategy = everyMinute, restoreOnStartup
+tv_sony_kld32_onlineday, tv_apple_onlineday, wii_onlineday, pc_server_onlineday, pc_jasper_onlineday, pc_daan_onlineday, pc_bjorn_onlineday, pc_eva_onlineday, ipad_jasper_onlineday, ipad_daan_onlineday, ipad_bjorn_onlineday, ipad_eva_onlineday, iphone_jasper_onlineday, iphone_daan_onlineday, iphone_bjorn_onlineday, iphone_eva_onlineday: strategy = everyMinute, restoreOnStartup 
 }
